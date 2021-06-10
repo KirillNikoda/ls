@@ -1,11 +1,10 @@
 package main
 
 import (
+	"github.com/KirillNikoda/lowskill/utils"
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/KirillNikoda/lowskill/utils"
 
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
@@ -17,8 +16,8 @@ const (
 
 var (
 	port                    string
-	bookResourcePrefix      string = apiPrefix + "/book"  // api/v1/book
-	manyBooksResourcePrefix string = apiPrefix + "/books" // api/v1/books
+	bookResourcePrefix      = apiPrefix + "/book"  // api/v1/book
+	manyBooksResourcePrefix = apiPrefix + "/books" // api/v1/books
 )
 
 func init() {
@@ -39,5 +38,5 @@ func main() {
 
 	log.Println("Router configured successfully! Let's go!")
 
-	log.Fatal(http.ListenAndServe(":"+port, router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }

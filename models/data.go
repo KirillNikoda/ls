@@ -23,7 +23,7 @@ func init() {
 		Title: "Lord Of The Rings",
 		Author: Author{
 			Name:     "J.R",
-			LastName: "Tolkin",
+			LastName: "Tolkien",
 			BornYear: 1892,
 		},
 		YearPublished: 1978,

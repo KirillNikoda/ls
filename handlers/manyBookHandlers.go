@@ -14,7 +14,7 @@ func initHeaders(writer http.ResponseWriter) {
 
 func GetAllBooks(writer http.ResponseWriter, request *http.Request) {
 	initHeaders(writer)
-	log.Println("Get infos about all boks in database")
+	log.Println("Get infos about all books in database")
 	writer.WriteHeader(200)
 	log.Println(models.DB)
 	json.NewEncoder(writer).Encode(models.DB)
